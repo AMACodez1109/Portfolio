@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Jorge L Pantaleon Vazquez</span></a>
+        <ul class="nav-links">
+            <li><a href="#about" id="nav-about">About</a></li>
+            <li><a href="#experience" id="nav-experience">Experience</a></li>
+            <li><a href="#projects" id="nav-projects">Projects</a></li>
+            <li><a href="#contact" id="nav-contact">Contact</a></li>
+        </ul>
+        <div class="header-right">
+            <div class="lang-switch">
+                <button id="btn-en" class="lang-btn active">EN</button>
+                <button id="btn-es" class="lang-btn">ES</button>
+            </div>
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <button class="visit-btn" id="visitGithub">Visit Github</button>
+        </div>
+    </header>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <img src="mepic.png" alt="me in a suite posing for the picture"/>
+            <div class="info-box">
+                <div class="text">
+                    <h2 id="about-hi">Hi, I'm</h2>
+                    <h1>Jorge L Pantaleon Vazquez</h1>
+                    <span id="about-role">Full Stack Developer</span>
+                </div>
+                <div class="btn-group">
+                    <a class="btn" href="ResumeRegJ.pdf" download id="btn-resume">Download Resume</a>
+                    <a class="btn" href="#contact" id="btn-contact">Contact</a>
+                </div>
+                <div class="socials">
+                    <a href="https://github.com/AMACodez1109" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/jorge-pantaleon-1905b188/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <h2 class="section-title" id="exp-title">Experience</h2>
+        <div class="experience-info">
+            <div class="grid">
+                <div class="grid-card">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <span id="exp-1-title">Current Project</span>
+                    <h2 id="exp-1-years">Unreal Engine 5</h2>
+                    <p id="exp-1-desc">C++ Fundamentals: Learn Game Programming for beginners, C++: Make Your Own Action Combat Game, C++ Multiplayer: Make Your Own Co-Op Game</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-file-code"></i>
+                    <span id="exp-2-title">Certificates</span>
+                    <p id="exp-2-desc">C#, HTML, CSS, JavaScript, Python, Microsoft Professional Full Stack Developer certificates. Check my LinkedIn and Certificates page for verified badges.</p>
+                    <a class="btn" href="Certificates.html" target="_blank" id="exp-2-sub">Certificates</a>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="exp-3-title">Websites</span>
+                    <p id="exp-3-desc">Modern sites I helped build with HTML, CSS, JavaScript</p>
+                    <a class="btn" href="websites.html" target="_blank" id="exp-3-sub">Websites</a>
+                </div>
+            </div>
+            <img src="motorcycle.png" alt="a picture of a motorcycle">
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="section-title" id="projects-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="tetris.png" alt="Tetris">
+                <h3>Tetris</h3>
+                <p id="proj-1-desc">Glow Neon Retro TETRIS, multiple language support, multiple players capability, multiple difficulty levels, recreated with HTML, CSS, JavaScript.</p>
+                <a class="btn" href="https://amacodez1109.github.io/Tetris-Game-Ex/" target="_blank" id="proj-2-desc">Play!</a>
+                <a class="btn" href="https://github.com/AMACodez1109/Tetris-Game-Ex" target="_blank" id="proj-3-desc">Github Repo / Code</a>
+            </div>
+            <div class="project-card">
+                <img src="pacman.png" alt="mrs pacman">
+                <h3 id="proj-2-title">More Projects</h3>
+                <a class="btn" href="https://github.com/AMACodez1109?tab=repositories" target="_blank" id="proj-3-desc-2">Github Repo / Code</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="input-box">
+            <h2 class="section-title" id="contact-title">Contact Me</h2>
+            <p class="contact-note" id="contact-note">Your message will open in your email app — no data is stored.</p>
+            
+            <form id="contactForm">
+                <div class="input">
+                    <input type="text" id="contactName" placeholder="Your Name" required>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input">
+                    <input type="email" id="contactEmail" placeholder="example@email.com" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input">
+                    <textarea id="contactMessage" placeholder="Your message..." required></textarea>
+                    <i class="fa-solid fa-message"></i>
+                </div>
+                <button type="submit" class="btn submit-btn" id="contact-submit">Send Message</button>
+                <p id="formStatus"></p>
+            </form>
+
+            <div class="direct-email">
+                <p class="contact-note-phone" id="contact-note-phone">You can message me at (805) 886-7049.</p>
+                <span id="direct-label">or Email Directly:</span> <a id="directEmailLink" href="mailto:jlpantaleon92@gmail.com">jlpantaleon92@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li><a href="#about" id="foot-about">About</a></li>
+            <li><a href="#experience" id="foot-exp">Experience</a></li>
+            <li><a href="#projects" id="foot-proj">Projects</a></li>
+            <li><a href="#contact" id="foot-contact">Contact</a></li>
+        </ul>
+        <p class="copyright" id="copyright">All Rights Reserved | Jorge L Pantaleon</p>
+    </footer>
+
+    <div id="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>

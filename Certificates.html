@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+   
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo"><span>Jorge L Pantaleon Vazquez</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html" id="nav-about">Home</a></li>
+        </ul>
+        <div class="header-right">
+            <div class="lang-switch">
+                <button id="btn-en" class="lang-btn active">EN</button>
+                <button id="btn-es" class="lang-btn">ES</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="experience" class="experience">
+        <h2 class="section-title" id="exp-title">Certificates</h2>
+        <div class="experience-info">
+            <div class="grid">
+                <div class="grid-card">
+                    <span id="certificate-1-title">C#</span>
+                    <p id="certificate-1-desc">C#, HTML, CSS, JavaScript, Python, Microsoft Professional Full Stack Developer certificates. Check my LinkedIn and Certificates page for verified badges.</p>
+                    <div class="btn-group">
+                        <a class="btn" href="https://www.freecodecamp.org/certification/jorgeluispantaleonvazquez/foundational-c-sharp-with-microsoft" target="_blank">C#</a>
+                    </div>
+                </div>
+
+                <div class="grid-card">
+                    <span id="certificate-2-title">Responsive Web Design</span>
+                    <p id="certificate-2-desc">Fundamentals of HTML and CSS, including modern layout, design, accessibility, and responsive web development, built practical projects and gain the skills to create professional, user-friendly webpages.</p>
+                    <div class="btn-group">
+                        <a class="btn" href="https://www.freecodecamp.org/certification/jorgeluispantaleonvazquez/responsive-web-design-v9" target="_blank">Responsive Web Design</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li><a href="index.html" id="foot-about">Home</a></li>
+        </ul>
+        <p class="copyright" id="copyright">All Rights Reserved | Jorge L Pantaleon</p>
+    </footer>
+
+<script>
+const translations = {
+    en: {
+        "nav-about": "Home",
+        "exp-title": "Certificates",
+        "certificate-1-title": "C#",
+        "certificate-1-desc": "C#, HTML, CSS, JavaScript, Python, Microsoft Professional Full Stack Developer certificates. Check my LinkedIn and Certificates page for verified badges.",
+        "certificate-2-title": "Responsive Web Design",
+        "certificate-2-desc": "Fundamentals of HTML and CSS, including modern layout, design, accessibility, and responsive web development, built practical projects and gain the skills to create professional, user-friendly webpages.",
+        "page-title": "Certificates - Jorge L Pantaleon Vazquez",
+        "copyright": "All Rights Reserved | Jorge L Pantaleon",
+        "foot-about": "Home"
+    },
+    es: {
+        "nav-about": "Inicio",
+        "exp-title": "Certificados",
+        "certificate-1-title": "C#",
+        "certificate-1-desc": "Certificaciones de Microsoft como desarrollador Full Stack (C#, HTML, CSS, JavaScript, Python). Consulta mi perfil de LinkedIn y mi página de certificaciones para ver las insignias verificadas.",
+        "certificate-2-title": "Diseño Web Responsivo",
+        "certificate-2-desc": "Fundamentos de HTML y CSS —incluyendo maquetación moderna, diseño, accesibilidad y desarrollo web adaptable (responsive)—; desarrolla proyectos prácticos y adquiere las habilidades necesarias para crear páginas web profesionales y fáciles de usar.",
+        "page-title": "Certificados - Jorge L Pantaleon Vazquez",
+        "copyright": "Todos los derechos reservados | Jorge L Pantaleon",
+        "foot-about": "Inicio"
+    }
+};
+
+function setLanguage(lang) {
+    localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang;
+
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+
+    const t = translations[lang];
+    for (const id in t) {
+        if (id === 'page-title') {
+            document.title = t[id];
+            continue;
+        }
+        const el = document.getElementById(id);
+        if (el) el.textContent = t[id];
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('btn-en').addEventListener('click', () => setLanguage('en'));
+    document.getElementById('btn-es').addEventListener('click', () => setLanguage('es'));
+    const savedLang = localStorage.getItem('lang') || 'en';
+    setLanguage(savedLang);
+});
+</script>
+
+</body>
+</html>
